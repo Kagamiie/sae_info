@@ -1,5 +1,9 @@
 /* ===== Base ===== */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 :root {
     --bg: #0b0f1a;
@@ -24,21 +28,38 @@
     --font: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: var(--font);
-    background: radial-gradient(1200px 600px at 50% -80px, rgba(139, 92, 246, 0.18), transparent 60%),
-                radial-gradient(1000px 600px at 120% 10%, rgba(34, 211, 238, 0.10), transparent 55%),
-                var(--bg);
+    background:
+        radial-gradient(
+            1200px 600px at 50% -80px,
+            rgba(139, 92, 246, 0.18),
+            transparent 60%
+        ),
+        radial-gradient(
+            1000px 600px at 120% 10%,
+            rgba(34, 211, 238, 0.1),
+            transparent 55%
+        ),
+        var(--bg);
     color: var(--text);
     line-height: 1.45;
     min-height: 100vh;
 }
 
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
 
 main {
     width: min(1180px, 100%);
@@ -73,9 +94,23 @@ main {
     background-clip: text;
 }
 
-nav { display: flex; flex-wrap: wrap; gap: 18px; }
-nav a { color: var(--muted); font-size: 14px; font-weight: 650; transition: color 0.15s, opacity 0.15s; }
-nav a:hover { color: var(--text); opacity: 0.95; }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 650;
+    transition:
+        color 0.15s,
+        opacity 0.15s;
+}
+nav a:hover {
+    color: var(--text);
+    opacity: 0.95;
+}
 
 .footer {
     text-align: center;
@@ -100,14 +135,28 @@ nav a:hover { color: var(--text); opacity: 0.95; }
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    transition: transform 0.12s, filter 0.12s;
+    transition:
+        transform 0.12s,
+        filter 0.12s;
 }
 
-.btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
-.btn.secondary { background: rgba(148, 163, 184, 0.14); color: var(--text); border: 1px solid rgba(148, 163, 184, 0.18); }
-.btn.danger { background: linear-gradient(180deg, #ef4444, #b91c1c); color: white; }
+.btn:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+}
+.btn.secondary {
+    background: rgba(148, 163, 184, 0.14);
+    color: var(--text);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+.btn.danger {
+    background: linear-gradient(180deg, #ef4444, #b91c1c);
+    color: white;
+}
 
-input, select, textarea {
+input,
+select,
+textarea {
     padding: 11px 13px;
     border-radius: 8px;
     border: 1px solid var(--border);
@@ -117,8 +166,14 @@ input, select, textarea {
     width: 100%;
 }
 
-input:focus { outline: 2px solid rgba(124, 92, 255, 0.45); border-color: var(--accent); }
-label { font-size: 13px; color: var(--muted); }
+input:focus {
+    outline: 2px solid rgba(124, 92, 255, 0.45);
+    border-color: var(--accent);
+}
+label {
+    font-size: 13px;
+    color: var(--muted);
+}
 
 .panel {
     background: var(--bg-panel);
@@ -135,11 +190,23 @@ label { font-size: 13px; color: var(--muted); }
     width: min(400px, 100%);
 }
 
-.form h1, .form h2 { margin: 0 0 4px; color: var(--gold-light); }
+.form h1,
+.form h2 {
+    margin: 0 0 4px;
+    color: var(--gold-light);
+}
 
-.info { color: var(--muted); font-size: 13px; }
-.error { color: #f87171; }
-.success { color: #4ade80; text-align: center; }
+.info {
+    color: var(--muted);
+    font-size: 13px;
+}
+.error {
+    color: #f87171;
+}
+.success {
+    color: #4ade80;
+    text-align: center;
+}
 
 /* ===== Home ===== */
 .hero {
@@ -152,8 +219,16 @@ label { font-size: 13px; color: var(--muted); }
     border-radius: 20px;
     border: 1px solid rgba(148, 163, 184, 0.16);
     background:
-        radial-gradient(ellipse 85% 65% at 50% 0%, rgba(139, 92, 246, 0.20), transparent 55%),
-        radial-gradient(ellipse 55% 50% at 80% 90%, rgba(34, 211, 238, 0.10), transparent 60%),
+        radial-gradient(
+            ellipse 85% 65% at 50% 0%,
+            rgba(139, 92, 246, 0.2),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse 55% 50% at 80% 90%,
+            rgba(34, 211, 238, 0.1),
+            transparent 60%
+        ),
         linear-gradient(180deg, rgba(15, 22, 39, 0.92), rgba(11, 15, 26, 0.92));
 }
 
@@ -182,8 +257,16 @@ label { font-size: 13px; color: var(--muted); }
     margin-top: 24px;
 }
 
-.grid3 h2 { margin-top: 0; color: var(--gold-light); font-size: 18px; }
-.grid3 p { color: var(--muted); margin: 0; font-size: 14px; }
+.grid3 h2 {
+    margin-top: 0;
+    color: var(--gold-light);
+    font-size: 18px;
+}
+.grid3 p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 14px;
+}
 
 /* ===== Personnages catalogue ===== */
 .page-title {
@@ -206,7 +289,9 @@ label { font-size: 13px; color: var(--muted); }
     border: 1px solid rgba(148, 163, 184, 0.18);
     border-radius: 14px;
     overflow: hidden;
-    transition: transform 0.18s, box-shadow 0.18s;
+    transition:
+        transform 0.18s,
+        box-shadow 0.18s;
 }
 
 .champ-card:hover {
@@ -221,7 +306,9 @@ label { font-size: 13px; color: var(--muted); }
     background: #0d1220;
 }
 
-.champ-card .champ-body { padding: 12px; }
+.champ-card .champ-body {
+    padding: 12px;
+}
 
 .champ-card h2 {
     margin: 0 0 6px;
@@ -238,7 +325,11 @@ label { font-size: 13px; color: var(--muted); }
     margin-bottom: 8px;
 }
 
-.champ-card p { margin: 4px 0; font-size: 12px; color: var(--muted); }
+.champ-card p {
+    margin: 4px 0;
+    font-size: 12px;
+    color: var(--muted);
+}
 
 .champ-traits {
     display: flex;
@@ -256,18 +347,47 @@ label { font-size: 13px; color: var(--muted); }
     color: #c4b5fd;
 }
 
-.cost-1 { border-color: var(--cost-1); }
-.cost-1 .champ-cost { background: rgba(156, 163, 175, 0.25); color: var(--cost-1); }
-.cost-2 { border-color: var(--cost-2); }
-.cost-2 .champ-cost { background: rgba(34, 197, 94, 0.2); color: var(--cost-2); }
-.cost-3 { border-color: var(--cost-3); }
-.cost-3 .champ-cost { background: rgba(59, 130, 246, 0.2); color: var(--cost-3); }
-.cost-4 { border-color: var(--cost-4); }
-.cost-4 .champ-cost { background: rgba(168, 85, 247, 0.2); color: var(--cost-4); }
-.cost-5 { border-color: var(--cost-5); }
-.cost-5 .champ-cost { background: rgba(245, 158, 11, 0.2); color: var(--cost-5); }
+.cost-1 {
+    border-color: var(--cost-1);
+}
+.cost-1 .champ-cost {
+    background: rgba(156, 163, 175, 0.25);
+    color: var(--cost-1);
+}
+.cost-2 {
+    border-color: var(--cost-2);
+}
+.cost-2 .champ-cost {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--cost-2);
+}
+.cost-3 {
+    border-color: var(--cost-3);
+}
+.cost-3 .champ-cost {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--cost-3);
+}
+.cost-4 {
+    border-color: var(--cost-4);
+}
+.cost-4 .champ-cost {
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--cost-4);
+}
+.cost-5 {
+    border-color: var(--cost-5);
+}
+.cost-5 .champ-cost {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--cost-5);
+}
 
-.auth { display: flex; justify-content: center; padding: 60px 16px; }
+.auth {
+    display: flex;
+    justify-content: center;
+    padding: 60px 16px;
+}
 
 /* ===== Admin ===== */
 .admin-grid {
@@ -277,7 +397,10 @@ label { font-size: 13px; color: var(--muted); }
     align-items: start;
 }
 
-.admin-list { max-height: 70vh; overflow-y: auto; }
+.admin-list {
+    max-height: 70vh;
+    overflow-y: auto;
+}
 
 .admin-row {
     display: grid;
@@ -296,11 +419,24 @@ label { font-size: 13px; color: var(--muted); }
     border: 2px solid var(--border);
 }
 
-.admin-row strong { color: var(--text); }
-.admin-row div { font-size: 13px; color: var(--muted); line-height: 1.4; }
-.admin-actions { text-align: right; font-size: 13px; }
-.admin-actions a:not(.delete) { color: #93c5fd; }
-.delete { color: #f87171; }
+.admin-row strong {
+    color: var(--text);
+}
+.admin-row div {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+.admin-actions {
+    text-align: right;
+    font-size: 13px;
+}
+.admin-actions a:not(.delete) {
+    color: #93c5fd;
+}
+.delete {
+    color: #f87171;
+}
 
 /* ============================================================
    TFT GAME SCREEN
@@ -320,8 +456,16 @@ body.tft-game {
     gap: 6px;
     padding: 6px;
     background:
-        radial-gradient(ellipse 70% 50% at 50% 30%, rgba(45, 74, 50, 0.35), transparent),
-        radial-gradient(ellipse 40% 30% at 10% 80%, rgba(124, 92, 255, 0.12), transparent),
+        radial-gradient(
+            ellipse 70% 50% at 50% 30%,
+            rgba(45, 74, 50, 0.35),
+            transparent
+        ),
+        radial-gradient(
+            ellipse 40% 30% at 10% 80%,
+            rgba(124, 92, 255, 0.12),
+            transparent
+        ),
         linear-gradient(180deg, #0a1018 0%, #060912 100%);
 }
 
@@ -340,10 +484,15 @@ body.tft-game {
     cursor: pointer;
     font-size: 16px;
     backdrop-filter: blur(8px);
-    transition: color 0.15s, border-color 0.15s;
+    transition:
+        color 0.15s,
+        border-color 0.15s;
 }
 
-.tft-settings:hover { color: var(--gold-light); border-color: var(--gold); }
+.tft-settings:hover {
+    color: var(--gold-light);
+    border-color: var(--gold);
+}
 
 .settings-modal {
     position: fixed;
@@ -356,9 +505,19 @@ body.tft-game {
     backdrop-filter: blur(4px);
 }
 
-.settings-modal.hidden { display: none; }
-.settings-panel { width: min(420px, 92vw); text-align: center; }
-.settings-actions { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+.settings-modal.hidden {
+    display: none;
+}
+.settings-panel {
+    width: min(420px, 92vw);
+    text-align: center;
+}
+.settings-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
 
 /* Left leaderboard */
 .tft-leaderboard {
@@ -427,15 +586,23 @@ body.tft-game {
     justify-content: center;
 }
 
-.player-line span { color: var(--gold-light); font-weight: 700; font-size: 11px; }
-.player-line small { grid-column: 1 / 3; color: var(--muted); font-size: 10px; }
+.player-line span {
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 11px;
+}
+.player-line small {
+    grid-column: 1 / 3;
+    color: var(--muted);
+    font-size: 10px;
+}
 
 .player-line .spectate-btn {
     grid-column: 2 / 3;
     justify-self: end;
     align-self: center;
     border: 1px solid rgba(148, 163, 184, 0.18);
-    background: rgba(148, 163, 184, 0.10);
+    background: rgba(148, 163, 184, 0.1);
     color: var(--text);
     font-size: 12px;
     border-radius: 8px;
@@ -443,8 +610,14 @@ body.tft-game {
     cursor: pointer;
     opacity: 0.95;
 }
-.player-line .spectate-btn:hover { opacity: 1; border-color: rgba(253, 230, 138, 0.35); }
-.player-line .spectate-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.player-line .spectate-btn:hover {
+    opacity: 1;
+    border-color: rgba(253, 230, 138, 0.35);
+}
+.player-line .spectate-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
 
 .player-line .hp-bar-wrap {
     grid-column: 1 / 3;
@@ -462,9 +635,17 @@ body.tft-game {
     transition: width 0.3s;
 }
 
-.player-line.main-player { border-left-color: var(--gold); background: rgba(201, 162, 39, 0.08); }
-.player-line.current { border-left-color: var(--xp); }
-.player-line.dead { opacity: 0.35; filter: grayscale(1); }
+.player-line.main-player {
+    border-left-color: var(--gold);
+    background: rgba(201, 162, 39, 0.08);
+}
+.player-line.current {
+    border-left-color: var(--xp);
+}
+.player-line.dead {
+    opacity: 0.35;
+    filter: grayscale(1);
+}
 
 /* Center column */
 .tft-center {
@@ -499,18 +680,38 @@ body.tft-game {
     white-space: nowrap;
 }
 
-.hud-stat b { color: var(--text); font-variant-numeric: tabular-nums; }
-.hud-stat.gold-stat b { color: var(--gold-light); }
-.hud-stat.hp-stat b { color: #fca5a5; }
-.hud-stat.timer-stat b { color: #86efac; }
-.hud-stat.timer-stat.urgent b { color: #ef4444; animation: timerPulse 0.6s ease infinite; }
-
-@keyframes timerPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+.hud-stat b {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+.hud-stat.gold-stat b {
+    color: var(--gold-light);
+}
+.hud-stat.hp-stat b {
+    color: #fca5a5;
+}
+.hud-stat.timer-stat b {
+    color: #86efac;
+}
+.hud-stat.timer-stat.urgent b {
+    color: #ef4444;
+    animation: timerPulse 0.6s ease infinite;
 }
 
-.hud-icon { font-size: 14px; line-height: 1; }
+@keyframes timerPulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.hud-icon {
+    font-size: 14px;
+    line-height: 1;
+}
 .hud-sound-btn {
     border: 1px solid var(--border);
     background: rgba(18, 24, 40, 0.88);
@@ -520,7 +721,9 @@ body.tft-game {
     height: 34px;
     cursor: pointer;
 }
-.hud-sound-btn.muted { opacity: 0.55; }
+.hud-sound-btn.muted {
+    opacity: 0.55;
+}
 
 /* Arena */
 .tft-arena {
@@ -544,9 +747,15 @@ body.tft-game {
     justify-content: center;
     overflow: hidden;
     background:
-        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(61, 92, 64, 0.5), transparent),
+        radial-gradient(
+            ellipse 80% 60% at 50% 40%,
+            rgba(61, 92, 64, 0.5),
+            transparent
+        ),
         linear-gradient(160deg, #1a2e1c 0%, #243828 40%, #152035 100%);
-    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5), 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 0 80px rgba(0, 0, 0, 0.5),
+        0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* Board 5x4 */
@@ -577,16 +786,26 @@ body.tft-game {
 }
 
 .cell.enemy-zone {
-    background: linear-gradient(145deg, rgba(80, 40, 50, 0.55), rgba(50, 25, 35, 0.45));
+    background: linear-gradient(
+        145deg,
+        rgba(80, 40, 50, 0.55),
+        rgba(50, 25, 35, 0.45)
+    );
     box-shadow: inset 0 0 12px rgba(239, 68, 68, 0.08);
 }
 
 .cell.player-zone {
-    background: linear-gradient(145deg, rgba(45, 74, 50, 0.7), rgba(35, 58, 40, 0.55));
+    background: linear-gradient(
+        145deg,
+        rgba(45, 74, 50, 0.7),
+        rgba(35, 58, 40, 0.55)
+    );
     box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.06);
 }
 
-.cell:nth-child(even) { filter: brightness(1.06); }
+.cell:nth-child(even) {
+    filter: brightness(1.06);
+}
 
 /* Combat log */
 .tft-log {
@@ -657,19 +876,31 @@ body.tft-game {
 }
 .owned-unit.team-player {
     border-color: #3b82f6 !important;
-    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.65), 0 6px 14px rgba(30, 64, 175, 0.45);
+    box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.65),
+        0 6px 14px rgba(30, 64, 175, 0.45);
 }
 
 .owned-unit.selected {
     outline: 2px solid var(--gold-light);
     outline-offset: 2px;
-    box-shadow: 0 0 0 1px rgba(240, 208, 96, 0.55), 0 10px 18px rgba(0, 0, 0, 0.6);
+    box-shadow:
+        0 0 0 1px rgba(240, 208, 96, 0.55),
+        0 10px 18px rgba(0, 0, 0, 0.6);
 }
 
-.owned-unit.cost-border-2 { border-color: var(--cost-2); }
-.owned-unit.cost-border-3 { border-color: var(--cost-3); }
-.owned-unit.cost-border-4 { border-color: var(--cost-4); }
-.owned-unit.cost-border-5 { border-color: var(--cost-5); }
+.owned-unit.cost-border-2 {
+    border-color: var(--cost-2);
+}
+.owned-unit.cost-border-3 {
+    border-color: var(--cost-3);
+}
+.owned-unit.cost-border-4 {
+    border-color: var(--cost-4);
+}
+.owned-unit.cost-border-5 {
+    border-color: var(--cost-5);
+}
 
 .owned-unit img {
     width: 100%;
@@ -699,7 +930,7 @@ body.tft-game {
     font-size: 9px;
     font-weight: 700;
     text-align: center;
-    background: linear-gradient(180deg, rgba(0,0,0,0.75), transparent);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
     text-shadow: 0 1px 2px #000;
     z-index: 2;
     white-space: nowrap;
@@ -713,7 +944,9 @@ body.tft-game {
     margin: auto;
 }
 
-.bench-slot .owned-unit { min-height: 48px; }
+.bench-slot .owned-unit {
+    min-height: 48px;
+}
 
 .owned-unit.fused {
     animation: fusionPop 0.7s ease both;
@@ -721,9 +954,15 @@ body.tft-game {
 }
 
 @keyframes fusionPop {
-    0% { transform: scale(0.7); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .player-line .xp-bar-wrap {
@@ -733,12 +972,16 @@ body.tft-game {
     background: rgba(0, 0, 0, 0.45);
     border-radius: 2px;
     overflow: hidden;
-    border: 1px solid rgba(148, 163, 184, 0.10);
+    border: 1px solid rgba(148, 163, 184, 0.1);
 }
 .player-line .xp-bar-fill {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, rgba(96,165,250,0.95), rgba(139,92,246,0.95));
+    background: linear-gradient(
+        90deg,
+        rgba(96, 165, 250, 0.95),
+        rgba(139, 92, 246, 0.95)
+    );
     border-radius: 2px;
     transition: width 0.25s ease;
 }
@@ -746,7 +989,9 @@ body.tft-game {
 .player-line.hot-streak {
     position: relative;
     border-color: rgba(251, 191, 36, 0.35) !important;
-    box-shadow: 0 0 0 1px rgba(251,191,36,0.22), 0 10px 24px rgba(251,191,36,0.10);
+    box-shadow:
+        0 0 0 1px rgba(251, 191, 36, 0.22),
+        0 10px 24px rgba(251, 191, 36, 0.1);
 }
 .player-line.hot-streak::after {
     content: "";
@@ -756,18 +1001,37 @@ body.tft-game {
     width: 22px;
     height: 22px;
     background:
-        radial-gradient(circle at 45% 30%, rgba(255,255,255,0.85), transparent 40%),
-        radial-gradient(circle at 45% 55%, rgba(253,230,138,0.9), transparent 60%),
-        radial-gradient(circle at 55% 70%, rgba(245,158,11,0.85), transparent 65%);
-    filter: blur(0.1px) drop-shadow(0 0 10px rgba(245,158,11,0.45));
+        radial-gradient(
+            circle at 45% 30%,
+            rgba(255, 255, 255, 0.85),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 45% 55%,
+            rgba(253, 230, 138, 0.9),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 55% 70%,
+            rgba(245, 158, 11, 0.85),
+            transparent 65%
+        );
+    filter: blur(0.1px) drop-shadow(0 0 10px rgba(245, 158, 11, 0.45));
     border-radius: 999px;
     animation: flamePulse 0.75s ease-in-out infinite;
     pointer-events: none;
     opacity: 0.95;
 }
 @keyframes flamePulse {
-    0%, 100% { transform: scale(0.92) translateY(0); opacity: 0.85; }
-    50% { transform: scale(1.06) translateY(-1px); opacity: 1; }
+    0%,
+    100% {
+        transform: scale(0.92) translateY(0);
+        opacity: 0.85;
+    }
+    50% {
+        transform: scale(1.06) translateY(-1px);
+        opacity: 1;
+    }
 }
 
 /* Combat tokens */
@@ -780,20 +1044,33 @@ body.tft-game {
     border: 2px solid var(--gold);
     background: #0d1220;
     z-index: 5;
-    transition: left 0.1s linear, top 0.1s linear, transform 0.14s ease;
+    transition:
+        left 0.1s linear,
+        top 0.1s linear,
+        transform 0.14s ease;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55);
     animation: idleFloat 2.2s ease-in-out infinite;
 }
 
-.combat-token.enemy { border-color: #ef4444; }
+.combat-token.enemy {
+    border-color: #ef4444;
+}
 .combat-token.player {
     border-color: #3b82f6;
-    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5), 0 8px 16px rgba(30, 64, 175, 0.45);
+    box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.5),
+        0 8px 16px rgba(30, 64, 175, 0.45);
 }
 .combat-token.enemy {
-    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.45), 0 8px 16px rgba(127, 29, 29, 0.45);
+    box-shadow:
+        0 0 0 1px rgba(239, 68, 68, 0.45),
+        0 8px 16px rgba(127, 29, 29, 0.45);
 }
-.combat-token img { width: 100%; height: 100%; object-fit: cover; }
+.combat-token img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .combat-token .stars {
     position: absolute;
@@ -827,30 +1104,62 @@ body.tft-game {
     transition: width 0.2s;
 }
 
-.combat-token.hit { filter: brightness(1.5); transform: scale(0.94); }
-.combat-token.dead-token { opacity: 0.15; filter: grayscale(1); }
-.combat-token.attacking { animation: attackBump 0.22s ease; }
-.combat-token.ranged-shot { animation: rangedShot 0.25s ease; }
-.combat-token.cast-shot { animation: castShot 0.28s ease; }
-.combat-token.melee-swing { animation: meleeSwing 0.22s ease; }
-.combat-token.enemy.attacking { filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.9)); }
-.combat-token.player.attacking { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.9)); }
+.combat-token.hit {
+    filter: brightness(1.5);
+    transform: scale(0.94);
+}
+.combat-token.dead-token {
+    opacity: 0.15;
+    filter: grayscale(1);
+}
+.combat-token.attacking {
+    animation: attackBump 0.22s ease;
+}
+.combat-token.ranged-shot {
+    animation: rangedShot 0.25s ease;
+}
+.combat-token.cast-shot {
+    animation: castShot 0.28s ease;
+}
+.combat-token.melee-swing {
+    animation: meleeSwing 0.22s ease;
+}
+.combat-token.enemy.attacking {
+    filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.9));
+}
+.combat-token.player.attacking {
+    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.9));
+}
 
 @keyframes attackBump {
-    50% { transform: scale(1.1) translateY(-3px); }
+    50% {
+        transform: scale(1.1) translateY(-3px);
+    }
 }
 @keyframes rangedShot {
-    50% { transform: scale(1.08) translateX(4px); }
+    50% {
+        transform: scale(1.08) translateX(4px);
+    }
 }
 @keyframes castShot {
-    35% { transform: scale(1.06) translateY(-2px); filter: saturate(1.2); }
+    35% {
+        transform: scale(1.06) translateY(-2px);
+        filter: saturate(1.2);
+    }
 }
 @keyframes meleeSwing {
-    50% { transform: scale(1.10) rotate(-2deg); }
+    50% {
+        transform: scale(1.1) rotate(-2deg);
+    }
 }
 @keyframes idleFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-2px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
 }
 
 .damage-pop {
@@ -893,37 +1202,86 @@ body.tft-game {
     box-shadow: 0 0 10px #f59e0b;
     z-index: 8;
     pointer-events: none;
-    transition: left 0.14s linear, top 0.14s linear, opacity 0.14s linear;
+    transition:
+        left 0.14s linear,
+        top 0.14s linear,
+        opacity 0.14s linear;
 }
 
 /* Projectiles variés (couleur/forme) selon coût + variante */
-.projectile.p-v2 { width: 12px; height: 12px; transform: rotate(45deg); border-radius: 4px; }
-.projectile.p-v3 { width: 8px; height: 14px; border-radius: 999px; }
+.projectile.p-v2 {
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+.projectile.p-v3 {
+    width: 8px;
+    height: 14px;
+    border-radius: 999px;
+}
 
-.projectile.p-cost-1 { background: radial-gradient(circle, #e5e7eb, #9ca3af); box-shadow: 0 0 10px rgba(156, 163, 175, 0.85); }
-.projectile.p-cost-2 { background: radial-gradient(circle, #86efac, #22c55e); box-shadow: 0 0 12px rgba(34, 197, 94, 0.75); }
-.projectile.p-cost-3 { background: radial-gradient(circle, #93c5fd, #3b82f6); box-shadow: 0 0 12px rgba(59, 130, 246, 0.75); }
-.projectile.p-cost-4 { background: radial-gradient(circle, #e9d5ff, #a855f7); box-shadow: 0 0 14px rgba(168, 85, 247, 0.75); }
-.projectile.p-cost-5 { background: radial-gradient(circle, #fde68a, #f59e0b); box-shadow: 0 0 14px rgba(245, 158, 11, 0.85); }
+.projectile.p-cost-1 {
+    background: radial-gradient(circle, #e5e7eb, #9ca3af);
+    box-shadow: 0 0 10px rgba(156, 163, 175, 0.85);
+}
+.projectile.p-cost-2 {
+    background: radial-gradient(circle, #86efac, #22c55e);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.75);
+}
+.projectile.p-cost-3 {
+    background: radial-gradient(circle, #93c5fd, #3b82f6);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.75);
+}
+.projectile.p-cost-4 {
+    background: radial-gradient(circle, #e9d5ff, #a855f7);
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.75);
+}
+.projectile.p-cost-5 {
+    background: radial-gradient(circle, #fde68a, #f59e0b);
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.85);
+}
 
 .projectile::after {
     content: "";
     position: absolute;
     inset: -6px;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(255,255,255,0.28), transparent 60%);
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.28),
+        transparent 60%
+    );
     opacity: 0.8;
     filter: blur(2px);
 }
 
 /* Slashes variés */
-.slash.s-v2 { transform: rotate(35deg); inset: 10px; border-top-width: 4px; }
-.slash.s-v3 { transform: rotate(-55deg); inset: 14px; border-top-width: 3px; }
-.slash.s-cost-1 { filter: drop-shadow(0 0 6px rgba(156,163,175,0.8)); }
-.slash.s-cost-2 { filter: drop-shadow(0 0 6px rgba(34,197,94,0.85)); }
-.slash.s-cost-3 { filter: drop-shadow(0 0 7px rgba(59,130,246,0.85)); }
-.slash.s-cost-4 { filter: drop-shadow(0 0 8px rgba(168,85,247,0.9)); }
-.slash.s-cost-5 { filter: drop-shadow(0 0 9px rgba(245,158,11,0.95)); }
+.slash.s-v2 {
+    transform: rotate(35deg);
+    inset: 10px;
+    border-top-width: 4px;
+}
+.slash.s-v3 {
+    transform: rotate(-55deg);
+    inset: 14px;
+    border-top-width: 3px;
+}
+.slash.s-cost-1 {
+    filter: drop-shadow(0 0 6px rgba(156, 163, 175, 0.8));
+}
+.slash.s-cost-2 {
+    filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.85));
+}
+.slash.s-cost-3 {
+    filter: drop-shadow(0 0 7px rgba(59, 130, 246, 0.85));
+}
+.slash.s-cost-4 {
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.9));
+}
+.slash.s-cost-5 {
+    filter: drop-shadow(0 0 9px rgba(245, 158, 11, 0.95));
+}
 
 /* Beam (tir instantané) */
 .beam {
@@ -944,12 +1302,35 @@ body.tft-game {
     width: 12px;
     height: 12px;
     border-radius: 999px;
-    background: rgba(255,255,255,0.55);
+    background: rgba(255, 255, 255, 0.55);
     filter: blur(1px);
 }
-.beam-cost-4 { background: linear-gradient(90deg, rgba(233,213,255,0.95), rgba(168,85,247,0.85), rgba(0,0,0,0)); box-shadow: 0 0 12px rgba(168,85,247,0.8); }
-.beam-cost-5 { background: linear-gradient(90deg, rgba(253,230,138,0.95), rgba(245,158,11,0.9), rgba(0,0,0,0)); box-shadow: 0 0 14px rgba(245,158,11,0.85); }
-@keyframes beamPop { from { opacity: 0; } to { opacity: 0.95; } }
+.beam-cost-4 {
+    background: linear-gradient(
+        90deg,
+        rgba(233, 213, 255, 0.95),
+        rgba(168, 85, 247, 0.85),
+        rgba(0, 0, 0, 0)
+    );
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+}
+.beam-cost-5 {
+    background: linear-gradient(
+        90deg,
+        rgba(253, 230, 138, 0.95),
+        rgba(245, 158, 11, 0.9),
+        rgba(0, 0, 0, 0)
+    );
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.85);
+}
+@keyframes beamPop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.95;
+    }
+}
 
 /* Impact FX */
 .impact-ring {
@@ -961,9 +1342,24 @@ body.tft-game {
     z-index: 10;
     animation: ring 0.22s ease forwards;
 }
-.impact-melee { border: 2px solid rgba(253,230,138,0.95); box-shadow: 0 0 10px rgba(253,230,138,0.55); }
-.impact-ranged { border: 2px solid rgba(147,197,253,0.95); box-shadow: 0 0 10px rgba(147,197,253,0.55); }
-@keyframes ring { from { transform: scale(0.5); opacity: 1; } to { transform: scale(1.9); opacity: 0; } }
+.impact-melee {
+    border: 2px solid rgba(253, 230, 138, 0.95);
+    box-shadow: 0 0 10px rgba(253, 230, 138, 0.55);
+}
+.impact-ranged {
+    border: 2px solid rgba(147, 197, 253, 0.95);
+    box-shadow: 0 0 10px rgba(147, 197, 253, 0.55);
+}
+@keyframes ring {
+    from {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.9);
+        opacity: 0;
+    }
+}
 
 .spark {
     position: absolute;
@@ -972,18 +1368,43 @@ body.tft-game {
     pointer-events: none;
     z-index: 10;
     background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), transparent 55%),
-        radial-gradient(circle at 70% 40%, rgba(253,230,138,0.65), transparent 60%),
-        radial-gradient(circle at 55% 75%, rgba(147,197,253,0.55), transparent 65%);
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(255, 255, 255, 0.9),
+            transparent 55%
+        ),
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(253, 230, 138, 0.65),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 55% 75%,
+            rgba(147, 197, 253, 0.55),
+            transparent 65%
+        );
     filter: blur(0.2px);
     animation: spark 0.22s ease forwards;
 }
-@keyframes spark { from { transform: scale(0.7); opacity: 1; } to { transform: scale(1.35); opacity: 0; } }
+@keyframes spark {
+    from {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
 .death-burst {
     position: absolute;
     inset: 0;
     border-radius: 8px;
-    background: radial-gradient(circle, rgba(248,113,113,0.8), rgba(127,29,29,0));
+    background: radial-gradient(
+        circle,
+        rgba(248, 113, 113, 0.8),
+        rgba(127, 29, 29, 0)
+    );
     z-index: 9;
     pointer-events: none;
     animation: deathBurst 0.35s ease forwards;
@@ -997,26 +1418,61 @@ body.tft-game {
     z-index: 7;
     animation: trailFade 0.22s ease forwards;
 }
-.move-trail.player { background: radial-gradient(circle, rgba(96,165,250,0.9), rgba(30,64,175,0)); }
-.move-trail.enemy { background: radial-gradient(circle, rgba(248,113,113,0.9), rgba(127,29,29,0)); }
+.move-trail.player {
+    background: radial-gradient(
+        circle,
+        rgba(96, 165, 250, 0.9),
+        rgba(30, 64, 175, 0)
+    );
+}
+.move-trail.enemy {
+    background: radial-gradient(
+        circle,
+        rgba(248, 113, 113, 0.9),
+        rgba(127, 29, 29, 0)
+    );
+}
 @keyframes trailFade {
-    from { opacity: 0.85; transform: scale(0.8); }
-    to { opacity: 0; transform: scale(1.5); }
+    from {
+        opacity: 0.85;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
 }
 @keyframes deathBurst {
-    from { transform: scale(0.5); opacity: 1; }
-    to { transform: scale(1.4); opacity: 0; }
+    from {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.4);
+        opacity: 0;
+    }
 }
 
 @keyframes slashAnim {
-    from { opacity: 0; transform: rotate(-25deg) scale(0.3); }
-    to { opacity: 1; transform: rotate(-25deg) scale(1); }
+    from {
+        opacity: 0;
+        transform: rotate(-25deg) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(-25deg) scale(1);
+    }
 }
 
-.pulse { animation: goldPulse 0.4s ease; }
+.pulse {
+    animation: goldPulse 0.4s ease;
+}
 
 @keyframes goldPulse {
-    50% { filter: drop-shadow(0 0 10px var(--gold-light)); transform: scale(1.1); }
+    50% {
+        filter: drop-shadow(0 0 10px var(--gold-light));
+        transform: scale(1.1);
+    }
 }
 
 /* Right traits panel */
@@ -1054,7 +1510,11 @@ body.tft-game {
     line-height: 1.4;
 }
 
-.synergy-list { display: flex; flex-direction: column; gap: 5px; }
+.synergy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
 .synergy {
     display: flex;
@@ -1068,16 +1528,27 @@ body.tft-game {
     color: var(--muted);
 }
 
-.synergy b { color: var(--text); }
-.synergy span { font-weight: 700; font-size: 11px; }
+.synergy b {
+    color: var(--text);
+}
+.synergy span {
+    font-weight: 700;
+    font-size: 11px;
+}
 
 .synergy.active {
     border-color: rgba(245, 158, 11, 0.5);
-    background: linear-gradient(90deg, rgba(245, 158, 11, 0.15), rgba(18, 24, 40, 0.8));
+    background: linear-gradient(
+        90deg,
+        rgba(245, 158, 11, 0.15),
+        rgba(18, 24, 40, 0.8)
+    );
     color: #fde68a;
 }
 
-.synergy.active b { color: #fde68a; }
+.synergy.active b {
+    color: #fde68a;
+}
 
 /* Bottom shop bar */
 .tft-shop {
@@ -1088,7 +1559,11 @@ body.tft-game {
     align-items: stretch;
     padding: 10px 12px;
     border-radius: 14px;
-    background: linear-gradient(180deg, rgba(10, 14, 26, 0.97), rgba(18, 24, 40, 0.97));
+    background: linear-gradient(
+        180deg,
+        rgba(10, 14, 26, 0.97),
+        rgba(18, 24, 40, 0.97)
+    );
     border: 1px solid var(--border);
     box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
 }
@@ -1133,7 +1608,9 @@ body.tft-game {
     background: rgba(13, 18, 32, 0.95);
     cursor: pointer;
     overflow: hidden;
-    transition: transform 0.14s, box-shadow 0.14s;
+    transition:
+        transform 0.14s,
+        box-shadow 0.14s;
     color: var(--text);
     min-height: 120px;
 }
@@ -1143,10 +1620,18 @@ body.tft-game {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
 }
 
-.shop-card.cost-2 { border-color: var(--cost-2); }
-.shop-card.cost-3 { border-color: var(--cost-3); }
-.shop-card.cost-4 { border-color: var(--cost-4); }
-.shop-card.cost-5 { border-color: var(--cost-5); }
+.shop-card.cost-2 {
+    border-color: var(--cost-2);
+}
+.shop-card.cost-3 {
+    border-color: var(--cost-3);
+}
+.shop-card.cost-4 {
+    border-color: var(--cost-4);
+}
+.shop-card.cost-5 {
+    border-color: var(--cost-5);
+}
 
 .shop-card img {
     width: 100%;
@@ -1209,11 +1694,16 @@ body.tft-game {
     .tft-app {
         grid-template-columns: 140px minmax(0, 1fr);
     }
-    .tft-traits { display: none; }
+    .tft-traits {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
-    .grid3, .admin-grid { grid-template-columns: 1fr; }
+    .grid3,
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 720px) {
@@ -1222,18 +1712,346 @@ body.tft-game {
         grid-template-rows: auto auto auto auto;
     }
 
-    .tft-leaderboard, .tft-center, .tft-traits, .tft-shop {
+    .tft-leaderboard,
+    .tft-center,
+    .tft-traits,
+    .tft-shop {
         grid-column: 1;
         grid-row: auto;
     }
 
-    .tft-traits { display: flex; }
-    .tft-players { max-height: 160px; }
-    .tft-hud { justify-content: flex-start; padding-right: 44px; }
-    .tft-shop { grid-template-columns: 1fr; }
-    .tft-shop-side { flex-direction: row; }
-    .tft-shop-cards { grid-template-columns: repeat(3, 1fr); }
-    .tft-bench { grid-template-columns: repeat(5, 1fr); }
-    .topbar { height: auto; padding: 14px 18px; flex-direction: column; align-items: flex-start; }
-    main { padding: 16px; }
+    .tft-traits {
+        display: flex;
+    }
+    .tft-players {
+        max-height: 160px;
+    }
+    .tft-hud {
+        justify-content: flex-start;
+        padding-right: 44px;
+    }
+    .tft-shop {
+        grid-template-columns: 1fr;
+    }
+    .tft-shop-side {
+        flex-direction: row;
+    }
+    .tft-shop-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tft-bench {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .topbar {
+        height: auto;
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    main {
+        padding: 16px;
+    }
+}
+/* Page acceuil */
+.page-acceuil {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 40px;
+    margin: -24px -24px 0;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: linear-gradient(
+        180deg,
+        rgba(15, 22, 39, 0.95),
+        rgba(11, 15, 26, 0.95)
+    );
+}
+
+.page-acceuil-contenu {
+    position: relative;
+    z-index: 2;
+}
+
+.page-acceuil h1 {
+    margin: 0 0 20px;
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff, rgba(253, 230, 138, 0.95));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sous-titre {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 40px;
+    max-width: 520px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.btn-gold {
+    background: linear-gradient(
+        180deg,
+        var(--gold-light),
+        var(--gold)
+    ) !important;
+    color: #0b0f1a !important;
+    border: none;
+}
+
+.btn-gold:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-border {
+    border: 2px solid var(--muted);
+    background: transparent !important;
+    color: var(--text) !important;
+}
+
+.btn-border:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.btn-petit {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+}
+
+.btn-grand {
+    padding: 14px 28px !important;
+    font-size: 15px !important;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.stat-nombre {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--gold-light);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+/* Sections Communes */
+.page-gameplay,
+.page-features,
+.page-demarrage {
+    padding: 60px 40px;
+    margin: 0 -24px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-top: none;
+}
+
+.page-demarrage {
+    background: linear-gradient(
+        180deg,
+        rgba(15, 22, 39, 0.95),
+        rgba(11, 15, 26, 0.95)
+    );
+}
+
+.section-titre {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-titre h2 {
+    margin: 0 0 12px;
+    font-size: clamp(36px, 6vw, 48px);
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, rgba(253, 230, 138, 0.92));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-titre p {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Cartes Gameplay */
+.cartes-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.carte {
+    position: relative;
+    padding: 30px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(18, 24, 40, 0.6);
+    transition: all 0.2s ease;
+}
+
+.carte:hover {
+    background: rgba(18, 24, 40, 0.8);
+    border-color: rgba(139, 92, 246, 0.35);
+}
+
+.numero {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: #0b0f1a;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.carte h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.carte p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Features */
+.features-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    padding: 30px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(18, 24, 40, 0.5);
+    transition: all 0.2s ease;
+}
+
+.feature:hover {
+    background: rgba(18, 24, 40, 0.7);
+    border-color: rgba(139, 92, 246, 0.35);
+}
+
+.icone {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.feature h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: var(--gold-light);
+}
+
+.feature p {
+    margin: 0 0 16px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.feature ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.feature li {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 8px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.feature li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold-light);
+    font-weight: 800;
+}
+
+/* Demarrage */
+.demarrage-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.demarrage-carte {
+    padding: 40px 30px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(18, 24, 40, 0.6);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.demarrage-carte:hover {
+    background: rgba(18, 24, 40, 0.8);
+    border-color: rgba(139, 92, 246, 0.35);
+}
+
+.etape {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: #0b0f1a;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.demarrage-carte h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.demarrage-carte p {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
 }
